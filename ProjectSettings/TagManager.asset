@@ -13,6 +13,7 @@ TagManager:
   - Paralax
   - LeftBounds
   - RightBounds
+  - TacoStand
   layers:
   - Default
   - TransparentFX

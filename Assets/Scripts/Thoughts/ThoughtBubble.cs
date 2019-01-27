@@ -30,6 +30,10 @@ public class ThoughtBubble : MonoBehaviour
     #endregion Rectangle Tranforms
     #endregion Varables
 
+    PlayerInteractive pInteractive;
+
+    Player pScript;
+
     // Use this for initialization
     void Start()
     {
@@ -44,6 +48,14 @@ public class ThoughtBubble : MonoBehaviour
         ResizeThoughtBubble();
         //PositionThoguhtDots();
 
+        print(pInteractive.GetInteractableQuip(pScript.GetInteractable(), "CameraClickArea"));
+
+        if (pScript.GetInteractable() != null)
+        {
+            ClearText();
+            mainText = pInteractive.GetInteractableQuip(pScript.GetInteractable(), "CameraClickArea");
+        }
+
         //if (strIndex >= mainText.Length)
         //{
         //    ClearText();
@@ -56,6 +68,8 @@ public class ThoughtBubble : MonoBehaviour
         textRectTrans = transform.Find("Text").GetComponent<RectTransform>();
         bubbleRecTrans = transform.Find("ThoughtBubble").GetComponent<RectTransform>();
         dotsRectTrans = transform.Find("ThoughtDots").GetComponent<RectTransform>();
+        pInteractive = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteractive>();
+        pScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         textComponent.text = "";
     }
@@ -81,10 +95,10 @@ public class ThoughtBubble : MonoBehaviour
     private void PositionThoguhtDots()
     {
         dotsRectTrans.localPosition = new Vector3(
-                        -bubbleRecTrans.sizeDelta.x / 2 + dotsRectTrans.sizeDelta.x / 2,
-                        -bubbleRecTrans.sizeDelta.y / 2 - dotsRectTrans.sizeDelta.y / 2,
-                        Mathf.Epsilon
-                );
+            -bubbleRecTrans.sizeDelta.x / 2 + dotsRectTrans.sizeDelta.x / 2,
+            -bubbleRecTrans.sizeDelta.y / 2 - dotsRectTrans.sizeDelta.y / 2,
+            Mathf.Epsilon
+        );
     }
 
     private void ClearText()

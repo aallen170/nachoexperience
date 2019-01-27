@@ -47,11 +47,27 @@ public class Player : MonoBehaviour
     BoxCollider2D playerCol;
     SpriteRenderer sRenderer;
 
+    GameObject[] tacoStandObjs;
+    BoxCollider2D[] tacoStandCols;
+
+    PhoneApps pApps;
+
+    GameObject collisionObj;
+
     private void Start()
     {
         controller = GetComponent<Controller2D>();
         playerCol = GetComponent<BoxCollider2D>();
         sRenderer = GetComponent<SpriteRenderer>();
+
+        tacoStandCols = new BoxCollider2D[GameObject.FindGameObjectsWithTag("TacoStand").Length];
+
+        tacoStandObjs = GameObject.FindGameObjectsWithTag("TacoStand");
+
+        print(tacoStandObjs[0].GetComponent<BoxCollider2D>());
+
+        for (int i = 0; i < tacoStandObjs.Length; i++)
+            tacoStandCols[i] = tacoStandObjs[i].GetComponent<BoxCollider2D>();
 
         playerCol.size = sRenderer.bounds.size;
     }
@@ -61,8 +77,7 @@ public class Player : MonoBehaviour
         BasicMovement();
         DetectJumping();
         ColPhysChecks();
-
-        if(velocity.y > 0) print(velocity);
+        print(GetInteractable());
     }
 
     private void BasicMovement()
@@ -104,4 +119,31 @@ public class Player : MonoBehaviour
         
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public GameObject GetInteractable()
+    {
+        foreach (BoxCollider2D tacoStandCol in tacoStandCols)
+        {
+            if (playerCol.bounds.min.x < tacoStandCol.bounds.max.x && playerCol.bounds.max.x > tacoStandCol.bounds.min.x)
+                return tacoStandCol.gameObject;
+        }
+
+        return null;
+        //print(controller.collisions.collidedObject.tag);
+        //return controller.collisions.collidedObject;
+    }
+
+    void OhPhoneClick(string app)
+    {
+
+    }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Interactable")
+    //    {
+    //        print(collision.name);
+    //        collisionObj = collision.gameObject;
+    //    }
+    //}
 }

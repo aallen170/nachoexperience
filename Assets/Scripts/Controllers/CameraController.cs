@@ -64,8 +64,6 @@ public class CameraController : MonoBehaviour
 
         //leftBounds = GameObject.FindGameObjectWithTag("LeftBounds").GetComponent<Transform>();
         //rightBounds = GameObject.FindGameObjectWithTag("RightBounds").GetComponent<Transform>();
-
-        print(cityBG);
     }
 
     // Update is called once per frame
