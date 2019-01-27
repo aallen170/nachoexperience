@@ -4,7 +4,39 @@ using UnityEngine;
 
 public class PlayerInteractive : MonoBehaviour
 {
+    private Reactions m_reactions;
+
     public List<GameObject> Interactables;
+
+    private int AppToItem(string thingname)
+    {
+        switch (thingname)
+        {
+            case "BeachClick":
+                return 0;
+            case "CommercialAlleyClick":
+                return 1;
+            case "TraderJanesDoor":
+                return 2;
+            case "HomeOfBluesDoor":
+                return 3;
+            case "ResidentialAlleyClick":
+                return 4;
+            case "BeachAlleyClick":
+                return 5;
+            case "TacoVendorClick":
+                return 6;
+            case "ChowsChowDoor":
+                return 7;
+            case "LatinMusicDoor":
+                return 8;
+            case "StadiumClick":
+                return 9;
+            case "WheelClick":
+                return 11;
+        }
+        return 0;
+    }
 
     public string GetInteractableQuip(GameObject worldObject, string clickedApp)
     {
@@ -14,9 +46,14 @@ public class PlayerInteractive : MonoBehaviour
             {
                 switch (clickedApp)
                 {
-                    case "":
-                    default:
-                        return null;
+                    case "CameraClickArea":
+                        return m_reactions.GetQuip(Reactions.Verb.Photograph, (Reactions.Item)AppToItem(thing.name));
+                    case "RecorderClickArea":
+                        return m_reactions.GetQuip(Reactions.Verb.Record, (Reactions.Item)AppToItem(thing.name));
+                    case "LightClickedArea":
+                        return m_reactions.GetQuip(Reactions.Verb.Photograph, (Reactions.Item)AppToItem(thing.name));
+                    case "PayClickedArea":
+                        return m_reactions.GetQuip(Reactions.Verb.Photograph, (Reactions.Item)AppToItem(thing.name));
                 }
             }
         }
