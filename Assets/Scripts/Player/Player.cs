@@ -44,9 +44,16 @@ public class Player : MonoBehaviour
     [HideInInspector] public Vector2 velocity;
     Controller2D controller;
 
+    BoxCollider2D playerCol;
+    SpriteRenderer sRenderer;
+
     private void Start()
     {
         controller = GetComponent<Controller2D>();
+        playerCol = GetComponent<BoxCollider2D>();
+        sRenderer = GetComponent<SpriteRenderer>();
+
+        playerCol.size = sRenderer.bounds.size;
     }
 
     private void Update()

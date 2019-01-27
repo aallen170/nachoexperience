@@ -1,12 +1,13 @@
 fileFormatVersion: 2
-guid: 63e7eebbfc90e3a459286d906ae532b8
+guid: c844e815404f9a54dad3b61040d27d68
 TextureImporter:
   fileIDToRecycleName:
-    21300000: NachoWalkCycle_Left_0
-    21300002: NachoWalkCycle_Left_1
-    21300004: NachoWalkCycle_Left_2
-    21300006: NachoWalkCycle_Left_3
-    21300008: NachoWalkCycle_Left_4
+    21300000: cat-animation_0
+    21300002: cat-animation_1
+    21300004: cat-animation_2
+    21300006: cat-animation_3
+    21300008: cat-animation_4
+    21300010: cat-animation_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -39,7 +40,7 @@ TextureImporter:
     mipBias: -1
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -84,13 +85,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NachoWalkCycle_Left_0
+      name: cat-animation_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 9
-        width: 89
-        height: 167
+        x: 4
+        y: 83
+        width: 40
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -98,13 +99,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NachoWalkCycle_Left_1
+      name: cat-animation_1
       rect:
         serializedVersion: 2
-        x: 180
-        y: 6
-        width: 81
-        height: 170
+        x: 48
+        y: 83
+        width: 42
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,13 +113,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NachoWalkCycle_Left_2
+      name: cat-animation_2
       rect:
         serializedVersion: 2
-        x: 319
-        y: 4
-        width: 101
-        height: 172
+        x: 130
+        y: 83
+        width: 42
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,13 +127,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NachoWalkCycle_Left_3
+      name: cat-animation_3
       rect:
         serializedVersion: 2
-        x: 469
-        y: 7
-        width: 83
-        height: 169
+        x: 172
+        y: 83
+        width: 42
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,13 +141,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NachoWalkCycle_Left_4
+      name: cat-animation_4
       rect:
         serializedVersion: 2
-        x: 612
-        y: 8
-        width: 78
-        height: 168
+        x: 0
+        y: 39
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat-animation_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 80
+        width: 39
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

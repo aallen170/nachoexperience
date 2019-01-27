@@ -107,10 +107,10 @@ TextureImporter:
       name: NachoWalkCycle_Right_0
       rect:
         serializedVersion: 2
-        x: 135
-        y: 39
-        width: 348
-        height: 752
+        x: 28
+        y: 8
+        width: 80
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,10 +121,10 @@ TextureImporter:
       name: NachoWalkCycle_Right_1
       rect:
         serializedVersion: 2
-        x: 757
-        y: 31
-        width: 373
-        height: 761
+        x: 168
+        y: 7
+        width: 84
+        height: 169
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: NachoWalkCycle_Right_2
       rect:
         serializedVersion: 2
-        x: 1350
-        y: 21
-        width: 454
-        height: 770
+        x: 300
+        y: 4
+        width: 101
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: NachoWalkCycle_Right_3
       rect:
         serializedVersion: 2
-        x: 2069
-        y: 29
-        width: 360
-        height: 763
+        x: 460
+        y: 6
+        width: 80
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: NachoWalkCycle_Right_4
       rect:
         serializedVersion: 2
-        x: 2686
-        y: 44
-        width: 401
-        height: 748
+        x: 596
+        y: 10
+        width: 90
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

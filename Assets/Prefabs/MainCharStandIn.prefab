@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61911920221750384}
   - component: {fileID: 114231540848255492}
   - component: {fileID: 114930119847617736}
+  - component: {fileID: 114483290308674262}
   m_Layer: 0
   m_Name: MainCharStandIn
   m_TagString: Player
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981388684148072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -2.49, z: -5}
+  m_LocalPosition: {x: 0, y: -3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,7 +60,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.78, y: 1.68}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -87,6 +88,29 @@ MonoBehaviour:
   horizontalRaySpacing: 0
   verticalRaySpacing: 0
   boxCollider: {fileID: 0}
+--- !u!114 &114483290308674262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981388684148072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e91989f4b6faf4cb81f4f07cdb93fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_walkingLeftStrip:
+  - {fileID: 21300000, guid: 63e7eebbfc90e3a459286d906ae532b8, type: 3}
+  - {fileID: 21300002, guid: 63e7eebbfc90e3a459286d906ae532b8, type: 3}
+  - {fileID: 21300004, guid: 63e7eebbfc90e3a459286d906ae532b8, type: 3}
+  - {fileID: 21300006, guid: 63e7eebbfc90e3a459286d906ae532b8, type: 3}
+  - {fileID: 21300008, guid: 63e7eebbfc90e3a459286d906ae532b8, type: 3}
+  m_walkingRightStrip:
+  - {fileID: 21300000, guid: 42f9fd931afcfc84ab23dc396c574a85, type: 3}
+  - {fileID: 21300002, guid: 42f9fd931afcfc84ab23dc396c574a85, type: 3}
+  - {fileID: 21300004, guid: 42f9fd931afcfc84ab23dc396c574a85, type: 3}
+  - {fileID: 21300006, guid: 42f9fd931afcfc84ab23dc396c574a85, type: 3}
+  - {fileID: 21300008, guid: 42f9fd931afcfc84ab23dc396c574a85, type: 3}
 --- !u!114 &114930119847617736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcb1b70e1dd7534fae45e62ee2bd368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 0
+  jumpPower: 50
   groundedTraction: 50
   airialTraction: 20
   fallSpeed: 100
@@ -138,7 +162,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a4e7076b6a009440ac92d0b8d15ff37, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 63e7eebbfc90e3a459286d906ae532b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
